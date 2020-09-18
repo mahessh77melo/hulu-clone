@@ -1,0 +1,27 @@
+.nav {
+	color: white;
+	display: flex;
+	flex-direction: row;
+	width: 100vw;
+	justify-content: space-around;
+	scrollbar-width: none;
+	overflow-x: scroll;
+	padding: 1rem 0;
+}
+.nav::-webkit-scrollbar {
+	display: none;
+}
+.nav__item {
+	padding: 1rem 2rem;
+	cursor: pointer;
+	font-weight: 500;
+	font-size: 1.7rem;
+	opacity: 0.6;
+	transition: all 0.2s ease;
+}
+.nav__item:hover {
+	background-color: rgba(240, 248, 255, 0.164);
+	border-radius: 2px;
+	opacity: 1;
+	transform: scale(1.2);
+}

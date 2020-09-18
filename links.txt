@@ -4,3 +4,32 @@ example request : https://api.themoviedb.org/3/movie/550?api_key=441508ec84fd078
 
 	API Read Access Token (v4 auth);
 	eyJhbGciOiJIUzI1NiJ9eyJhdWQiOiI0NDE1MDhlYzg0ZmQwNzg2NmRhMDhjNjY3Yzc4YjRmYiIsInN1YiI6IjVmNjA0Yzc1ZmQ3YWE0MDAzYmYyOGZmYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ5uyOfT3053ViDSUeb39M2dp6xOACB_RDl6it_1_cPIQ
+
+
+	backdrop_path: "/mGVrXeIjyecj6TKmwPVpHlscEmw.jpg"
+​​​​
+first_air_date: "2019-07-25"
+​​​​
+genre_ids: Array [ 10759, 10765 ]
+​​​​
+id: 76479
+​​​​
+media_type: "tv"
+​​​​
+name: "The Boys"
+​​​​
+origin_country: Array [ "US" ]
+​​​​
+original_language: "en"
+​​​​
+original_name: "The Boys"
+​​​​
+overview: "A group of vigilantes known informally as “The Boys” set out to take down corrupt superheroes with no more than blue-collar grit and a willingness to fight dirty."
+​​​​
+popularity: 1739.192
+​​​​
+poster_path: "/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg"
+​​​​
+vote_average: 8.4
+​​​​
+vote_count: 1857

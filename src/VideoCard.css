@@ -1,0 +1,46 @@
+.video-card {
+	color: white;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.3s ease-in-out;
+	justify-content: space-around;
+	align-items: flex-start;
+	padding: 2rem;
+	overflow: hidden;
+	height: 50rem;
+	width: 50rem;
+}
+.card__image {
+	height: 30rem;
+	width: 46rem;
+	object-fit: cover;
+	border-radius: 3px;
+	box-shadow: 0 1.4rem 1.8rem rgba(0, 0, 0, 0.6);
+	cursor: pointer;
+}
+.video-card:hover {
+	transform: scale(1.03) translate(0, -1rem);
+}
+.card__statement {
+	visibility: hidden;
+	font-size: 1.5rem;
+	display: flex;
+	position: relative;
+}
+.video-card:hover .card__statement {
+	visibility: visible;
+	display: flex;
+	width: 100%;
+	justify-content: flex-start;
+}
+.card__title {
+	font-size: 2.5rem;
+}
+.card__statement > * {
+	padding-right: 1.5rem;
+	display: flex;
+	align-items: center;
+}
+.card__caption {
+	font-size: 1.3rem;
+}
