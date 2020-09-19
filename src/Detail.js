@@ -20,8 +20,7 @@ const Detail = () => {
 				setCurrent(movie);
 			}
 		});
-	}, []);
-	var fontSizing = {};
+	}, [movieID]);
 	return (
 		<div className="detail">
 			<div className="detail__left">

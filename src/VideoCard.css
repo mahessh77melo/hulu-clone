@@ -9,6 +9,7 @@
 	overflow: hidden;
 	height: 50rem;
 	width: 50rem;
+	position: relative;
 }
 .card__image {
 	height: 30rem;
@@ -17,6 +18,14 @@
 	border-radius: 3px;
 	box-shadow: 0 1.4rem 1.8rem rgba(0, 0, 0, 0.6);
 	cursor: pointer;
+	z-index: 1;
+}
+.card__logo {
+	position: absolute;
+	top: 4rem;
+	right: 3rem;
+	height: 2.75rem;
+	z-index: 2;
 }
 .video-card:hover {
 	transform: scale(1.03) translate(0, -1rem);

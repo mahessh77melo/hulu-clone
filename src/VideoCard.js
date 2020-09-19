@@ -18,6 +18,18 @@ const VideoCard = forwardRef(({ movie }, ref) => {
 					src={`${base}${movie.backdrop_path || movie.poster_path}`}
 					alt="poster"
 				/>
+				{/* <img
+					className="card__logo"
+					src="https://press.hulu.com/wp-content/uploads/2020/02/hulu-green-digital.png?w=960"
+					alt="hulu"
+				/> */}
+				<img
+					src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Hulu_Logo.svg"
+					className="card__logo"
+					alt="hulu"
+					height="3.5rem"
+					width="auto"
+				/>
 			</Link>
 
 			<TextTruncate
