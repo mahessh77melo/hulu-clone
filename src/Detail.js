@@ -49,7 +49,9 @@ const Detail = () => {
 						{current.vote_count} ratings <StarIcon />{" "}
 					</p>
 					{current.origin_country ? (
-						<p className="detail__country">{current.origin_country}</p>
+						<p className="detail__country">
+							Country : {current.origin_country}
+						</p>
 					) : (
 						""
 					)}

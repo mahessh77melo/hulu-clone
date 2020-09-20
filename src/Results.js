@@ -29,11 +29,7 @@ const Results = ({ genre }) => {
 				leaveAnimation="elevator"
 			>
 				{movies.map((movie) => (
-					<VideoCard
-						movie={movie}
-						key={movie.id}
-						style={{ transitionDelay: "0s !important;" }}
-					/>
+					<VideoCard movie={movie} key={movie.id} />
 				))}
 			</FlipMove>
 		</div>
