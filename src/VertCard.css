@@ -1,0 +1,39 @@
+.vert-card {
+	display: flex;
+	flex-direction: column;
+	width: 35rem;
+	max-height: 35rem;
+	align-items: center;
+	border-radius: 3px;
+	margin: 2rem;
+	padding: 0 0.5rem;
+	border: 3px solid transparent;
+	box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.4);
+	box-sizing: content-box;
+}
+.vert-card * {
+	margin: 0.75rem 0;
+}
+.vert-card__image {
+	width: 35rem;
+	align-self: center;
+	height: auto;
+	object-fit: cover;
+}
+.vert-card:hover {
+	transition: all 0.15s ease-out;
+	max-height: 45rem;
+	border: 3px solid #051421;
+	box-shadow: 0 2rem 2.2rem rgba(0, 0, 0, 0.7);
+	background-color: #042727;
+	transform: translateY(-2rem);
+}
+.vert-card:hover .card__statement {
+	visibility: visible;
+	display: flex;
+	width: 100%;
+	flex-direction: column;
+	font-size: 1.7rem;
+	align-items: flex-start;
+	justify-content: flex-start;
+}

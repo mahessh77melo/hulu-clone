@@ -7,6 +7,7 @@ import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import SearchIcon from "@material-ui/icons/Search";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import { IconButton } from "@material-ui/core";
+import { Link } from "react-router-dom";
 
 const Header = () => {
 	return (
@@ -30,12 +31,14 @@ const Header = () => {
 					</IconButton>
 					<p className="header__icon-text">Verified</p>
 				</div>
-				<div className="header__icon">
-					<IconButton>
-						<VideoLibraryIcon />
-					</IconButton>
-					<p className="header__icon-text">Collections</p>
-				</div>
+				<Link style={{ textDecoration: "none" }} to="/watchlist">
+					<div className="header__icon">
+						<IconButton>
+							<VideoLibraryIcon />
+						</IconButton>
+						<p className="header__icon-text">Watchlist</p>
+					</div>
+				</Link>
 				<div className="header__icon">
 					<IconButton>
 						<SearchIcon />

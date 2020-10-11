@@ -1,26 +1,26 @@
 import React, { useEffect, useState } from "react";
 import "./Detail.css";
 import { useParams } from "react-router-dom";
-import { exp_results } from "./Results";
+import axios from "./axios";
 import "./Detail.css";
 import StarIcon from "@material-ui/icons/Star";
 import SubdirectoryArrowRightIcon from "@material-ui/icons/SubdirectoryArrowRight";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 
-const Detail = () => {
-	const { movieID } = useParams();
-	const [current, setCurrent] = useState(0);
+const Detail = ({ setWatchList }) => {
+	const { movieID, mediaType } = useParams();
+	const api_key = "441508ec84fd07866da08c667c78b4fb";
+	const [current, setCurrent] = useState(4);
 	const base = "https://image.tmdb.org/t/p/original/";
 	console.log(movieID);
 	useEffect(() => {
-		exp_results.forEach((movie) => {
-			if (movie.id == movieID) {
-				console.log(`entered at id : ${movieID}`);
-				setCurrent(movie);
-			}
-		});
-	}, [movieID]);
+		async function getCurrent(id, media) {
+			const movie = await axios.get(`${media}/${id}?api_key=${api_key}`);
+			setCurrent(movie.data);
+		}
+		getCurrent(movieID, mediaType);
+	}, [movieID, mediaType]);
 	return (
 		<div className="detail">
 			<div className="detail__left">
@@ -64,7 +64,18 @@ const Detail = () => {
 					<button className="btn btn-play">
 						<PlayCircleOutlineIcon /> Watch Now
 					</button>
-					<button className="btn btn-watchlist">
+					<button
+						className="btn btn-watchlist"
+						onClick={() => {
+							setWatchList((prev) => {
+								console.log(prev);
+								return prev.concat({
+									idn: current.id,
+									mediaType: current.media_type ? current.mediaType : "movie",
+								});
+							});
+						}}
+					>
 						<AddCircleOutlineIcon /> Add to Watchlist
 					</button>
 				</div>

@@ -14,6 +14,7 @@
 .card__image {
 	height: 30rem;
 	width: 46rem;
+	filter: saturate(1.5);
 	object-fit: cover;
 	border-radius: 3px;
 	box-shadow: 0 1.4rem 1.8rem rgba(0, 0, 0, 0.6);

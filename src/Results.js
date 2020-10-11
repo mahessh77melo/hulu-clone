@@ -5,7 +5,6 @@ import axios from "./axios";
 
 import FlipMove from "react-flip-move";
 
-let exp_results = [];
 const Results = ({ genre }) => {
 	const [movies, setMovies] = useState([]);
 
@@ -16,7 +15,6 @@ const Results = ({ genre }) => {
 			console.log(genre);
 			console.log(results.data.results);
 			setMovies(results.data.results);
-			exp_results = results.data.results;
 		}
 		loadResults();
 	}, [genre]);
@@ -36,4 +34,4 @@ const Results = ({ genre }) => {
 	);
 };
 
-export { exp_results, Results };
+export { Results };

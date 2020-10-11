@@ -10,7 +10,7 @@ const VideoCard = forwardRef(({ movie }, ref) => {
 	return (
 		<div className="video-card" ref={ref}>
 			<Link
-				to={`/movie/${movie.id}`}
+				to={`/${movie.media_type ? movie.media_type : "movie"}/${movie.id}`}
 				style={{ textDecoration: "none", color: "white" }}
 			>
 				<img
