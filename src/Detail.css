@@ -86,3 +86,8 @@
 .detail__buttons {
 	display: flex;
 }
+.btn-watchlist:active {
+	transform: scale(0.98) translateY(0.3rem);
+	box-shadow: 0 1rem 1.2rem rgba(0, 0, 0, 0.8);
+	color: #141414;
+}

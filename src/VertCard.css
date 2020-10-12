@@ -1,11 +1,13 @@
 .vert-card {
 	display: flex;
 	flex-direction: column;
-	width: 35rem;
+	width: 32rem;
 	max-height: 35rem;
 	align-items: center;
 	border-radius: 3px;
 	margin: 2rem;
+	color: white;
+	margin-bottom: 10rem;
 	padding: 0 0.5rem;
 	border: 3px solid transparent;
 	box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.4);
@@ -15,25 +17,50 @@
 	margin: 0.75rem 0;
 }
 .vert-card__image {
-	width: 35rem;
+	width: 32rem;
 	align-self: center;
 	height: auto;
 	object-fit: cover;
+	/* filter: saturate(80%); */
+}
+.vert-card:hover .vert-card__image {
+	transition: 0.5s ease-out;
+	filter: saturate(125%);
 }
 .vert-card:hover {
 	transition: all 0.15s ease-out;
 	max-height: 45rem;
 	border: 3px solid #051421;
 	box-shadow: 0 2rem 2.2rem rgba(0, 0, 0, 0.7);
-	background-color: #042727;
+	background-image: linear-gradient(
+		45deg,
+		#051421 0%,
+		#051421 30%,
+		#022b18 55%,
+		#01381f 70%
+	);
+	margin-bottom: 0rem;
 	transform: translateY(-2rem);
 }
 .vert-card:hover .card__statement {
 	visibility: visible;
+	transition-delay: 0.05s;
 	display: flex;
 	width: 100%;
 	flex-direction: column;
 	font-size: 1.7rem;
 	align-items: flex-start;
 	justify-content: flex-start;
+}
+.vert-card__bottom {
+	display: flex;
+	z-index: 0;
+	visibility: hidden;
+}
+.delete .MuiSvgIcon-root {
+	color: white;
+	font-size: 4rem;
+}
+.vert-card:hover .vert-card__bottom {
+	visibility: visible;
 }

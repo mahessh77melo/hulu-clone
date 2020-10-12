@@ -14,13 +14,18 @@ function App() {
 	const [watchList, setWatchList] = useState([
 		{ idn: 497582, mediaType: "movie" },
 		{ idn: 76479, mediaType: "tv" },
+		{ idn: 499932, mediaType: "movie" },
+		{ idn: 337401, mediaType: "movie" },
+		{ idn: 737568, mediaType: "movie" },
+		{ idn: 155, mediaType: "movie" },
+		{ idn: 680, mediaType: "movie" },
 	]);
 
 	return (
 		<div className="app">
 			<Router>
 				<Route path="/:mediaType/:movieID" exact>
-					<Detail setWatchList={setWatchList} />
+					<Detail watchList={watchList} setWatchList={setWatchList} />
 				</Route>
 				<Route path="/" exact>
 					<Header />
@@ -28,7 +33,7 @@ function App() {
 					<Results genre={genre} />
 				</Route>
 				<Route path="/watchlist" exact>
-					<WatchList watchList={watchList} />
+					<WatchList watchList={watchList} setWatchList={setWatchList} />
 				</Route>
 			</Router>
 		</div>

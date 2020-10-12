@@ -2,5 +2,11 @@
 	min-height: 100vh;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: flex-start;
+	justify-content: space-around;
+}
+.title {
+	font-size: 5.5rem;
+	letter-spacing: 2px;
+	color: whitesmoke;
+	margin: 5rem 2rem;
 }

@@ -7,8 +7,9 @@ import StarIcon from "@material-ui/icons/Star";
 import SubdirectoryArrowRightIcon from "@material-ui/icons/SubdirectoryArrowRight";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
+import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 
-const Detail = ({ setWatchList }) => {
+const Detail = ({ watchList, setWatchList }) => {
 	const { movieID, mediaType } = useParams();
 	const api_key = "441508ec84fd07866da08c667c78b4fb";
 	const [current, setCurrent] = useState(4);
@@ -64,20 +65,26 @@ const Detail = ({ setWatchList }) => {
 					<button className="btn btn-play">
 						<PlayCircleOutlineIcon /> Watch Now
 					</button>
-					<button
-						className="btn btn-watchlist"
-						onClick={() => {
-							setWatchList((prev) => {
-								console.log(prev);
-								return prev.concat({
-									idn: current.id,
-									mediaType: current.media_type ? current.mediaType : "movie",
+					{watchList.filter((item) => item.idn === current.id).length ? (
+						<button className="btn btn-added">
+							<CheckCircleIcon /> Added to Watchlist
+						</button>
+					) : (
+						<button
+							className="btn btn-watchlist"
+							onClick={() => {
+								setWatchList((prev) => {
+									console.log(prev);
+									return prev.concat({
+										idn: current.id,
+										mediaType: mediaType,
+									});
 								});
-							});
-						}}
-					>
-						<AddCircleOutlineIcon /> Add to Watchlist
-					</button>
+							}}
+						>
+							<AddCircleOutlineIcon /> Add to Watchlist
+						</button>
+					)}
 				</div>
 			</div>
 		</div>

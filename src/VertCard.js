@@ -5,8 +5,10 @@ import "./VideoCard.css";
 import "./VertCard.css";
 import GradeIcon from "@material-ui/icons/Grade";
 import FavoriteIcon from "@material-ui/icons/Favorite";
+import DeleteIcon from "@material-ui/icons/Delete";
+import { IconButton } from "@material-ui/core";
 
-const VertCard = ({ movie }) => {
+const VertCard = ({ movie, setWatchList }) => {
 	const base = "https://image.tmdb.org/t/p/original/";
 	console.log(movie);
 	return (
@@ -22,12 +24,15 @@ const VertCard = ({ movie }) => {
 				/>
 				<h2 className="card__title">{movie.name ? movie.name : movie.title}</h2>
 				<TextTruncate
-					line={3}
+					line={2}
 					truncateText="..."
 					text={movie.overview}
 					className="card__caption"
 					element="p"
 				/>
+			</Link>
+
+			<div className="vert-card__bottom">
 				<div className="card__statement">
 					<div className="rating">
 						User Rating : {movie.vote_average}&nbsp; <FavoriteIcon />
@@ -37,7 +42,20 @@ const VertCard = ({ movie }) => {
 						<GradeIcon />
 					</div>
 				</div>
-			</Link>
+
+				<div className="delete">
+					<IconButton>
+						<DeleteIcon
+							onClick={() =>
+								setWatchList((prev) => {
+									console.log(prev.filter((item) => item.idn != movie.id));
+									return prev.filter((item) => item.idn != movie.id);
+								})
+							}
+						/>
+					</IconButton>
+				</div>
+			</div>
 		</div>
 	);
 };
