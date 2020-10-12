@@ -59,12 +59,21 @@ const Header = () => {
 						</p>
 					</div>
 				</Link>
-				<div className="header__icon">
-					<IconButton>
-						<SearchIcon />
-					</IconButton>
-					<p className="header__icon-text">Search</p>
-				</div>
+				<Link style={{ textDecoration: "none" }} to="/search">
+					<div className="header__icon">
+						<IconButton>
+							<SearchIcon />
+						</IconButton>
+						<p
+							className="header__icon-text"
+							style={{
+								display: active === "/search" ? "inline-block" : "none",
+							}}
+						>
+							Search
+						</p>
+					</div>
+				</Link>
 				<div className="header__icon">
 					<IconButton>
 						<PersonOutlineIcon />

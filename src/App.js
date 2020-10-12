@@ -8,6 +8,7 @@ import Detail from "./Detail";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import requests from "./requests";
 import WatchList from "./WatchList";
+import Search from "./Search";
 
 function App() {
 	const [genre, setGenre] = useState(requests.fetchTrending);
@@ -35,6 +36,10 @@ function App() {
 				<Route path="/watchlist" exact>
 					<Header />
 					<WatchList watchList={watchList} setWatchList={setWatchList} />
+				</Route>
+				<Route path="/search">
+					<Header />
+					<Search />
 				</Route>
 			</Router>
 		</div>

@@ -2,7 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	width: 32rem;
-	max-height: 33rem;
+	max-height: 35rem;
 	align-items: center;
 	border-radius: 3px;
 	margin: 2rem;
@@ -29,7 +29,7 @@
 }
 .vert-card:hover {
 	transition: all 0.15s ease-out;
-	max-height: 43rem;
+	max-height: 45rem;
 	border: 3px solid #051421;
 	box-shadow: 0 2rem 2.2rem rgba(0, 0, 0, 0.7);
 	background-image: linear-gradient(
@@ -62,5 +62,6 @@
 	font-size: 4rem;
 }
 .vert-card:hover .vert-card__bottom {
+	transition-delay: 0.05s;
 	visibility: visible;
 }
