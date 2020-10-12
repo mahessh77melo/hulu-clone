@@ -8,6 +8,7 @@ const WatchList = ({ watchList, setWatchList }) => {
 	console.log(watchList);
 	const [Movies, setMovies] = useState([]);
 	const [loading, setLoading] = useState(true);
+
 	useEffect(() => {
 		setMovies([]);
 		async function getWatchList(id, media) {

@@ -1,6 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
-import PageviewSharpIcon from "@material-ui/icons/PageviewSharp";
 import axios from "./axios";
 import "./Search.css";
 import VideoCard from "./VideoCard";

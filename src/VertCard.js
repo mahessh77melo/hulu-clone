@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TextTruncate from "react-text-truncate";
-import "./VideoCard.css";
-import "./VertCard.css";
 import GradeIcon from "@material-ui/icons/Grade";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import DeleteIcon from "@material-ui/icons/Delete";
 import { IconButton } from "@material-ui/core";
+import "./VideoCard.css";
+import "./VertCard.css";
 
 const VertCard = ({ movie, setWatchList }) => {
 	const base = "https://image.tmdb.org/t/p/original/";

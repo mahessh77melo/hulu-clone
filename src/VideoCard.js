@@ -34,7 +34,6 @@ const VideoCard = forwardRef(({ movie }, ref) => {
 				className="card__caption"
 				element="p"
 			/>
-			{/* <p className="card__caption">{movie.overview.slice(0, 65)}...</p> */}
 			<h2 className="card__title">{movie.name ? movie.name : movie.title}</h2>
 			<div className="card__statement">
 				<div className="release-date">
