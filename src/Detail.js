@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Detail.css";
 import { useParams } from "react-router-dom";
 import axios from "./axios";
-import "./Detail.css";
 import StarIcon from "@material-ui/icons/Star";
 import SubdirectoryArrowRightIcon from "@material-ui/icons/SubdirectoryArrowRight";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";

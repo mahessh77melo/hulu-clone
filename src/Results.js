@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import "./Results.css";
 import VideoCard from "./VideoCard";
 import axios from "./axios";
-
 import FlipMove from "react-flip-move";
 
 const Results = ({ genre }) => {

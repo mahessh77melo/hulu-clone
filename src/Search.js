@@ -7,9 +7,16 @@ import { IconButton } from "@material-ui/core";
 
 const Search = () => {
 	const api_key = "441508ec84fd07866da08c667c78b4fb";
+	const getInitValue = () => {
+		if (localStorage.searchRes) {
+			return JSON.parse(localStorage.searchRes);
+		} else {
+			return [];
+		}
+	};
 	const [search, setSearch] = useState("");
 	const [media, setMedia] = useState("movie");
-	const [results, setResults] = useState(JSON.parse(localStorage.searchRes));
+	const [results, setResults] = useState(getInitValue());
 	const getQuery = (e) => {
 		e.preventDefault();
 		async function fetchResults() {
