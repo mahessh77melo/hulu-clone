@@ -2,7 +2,7 @@
 	min-height: 100vh;
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: flex-start;
 }
 .title {
 	font-size: 5.5rem;

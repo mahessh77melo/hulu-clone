@@ -47,7 +47,7 @@
 	transition: all 0.2s ease-in;
 }
 .header__icon:hover .header__icon-text {
-	display: inline-block;
+	display: inline-block !important;
 }
 .text-active {
 	display: inline-block;

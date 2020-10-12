@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
 import HomeIcon from "@material-ui/icons/Home";
 import FlashOnIcon from "@material-ui/icons/FlashOn";
@@ -10,15 +10,28 @@ import { IconButton } from "@material-ui/core";
 import { Link } from "react-router-dom";
 
 const Header = () => {
+	const [active, setActive] = useState("Home");
+	useEffect(() => {
+		setActive(window.location.pathname);
+	}, []);
 	return (
 		<div className="header">
 			<div className="header__icons">
-				<div className="header__icon">
-					<IconButton>
-						<HomeIcon />
-					</IconButton>
-					<p className="header__icon-text text-active">Home</p>
-				</div>
+				<Link style={{ textDecoration: "none" }} to="/">
+					<div className="header__icon">
+						<IconButton>
+							<HomeIcon />
+						</IconButton>
+						<p
+							className="header__icon-text"
+							style={{
+								display: active === "/" ? "inline-block" : "none",
+							}}
+						>
+							Home
+						</p>
+					</div>
+				</Link>
 				<div className="header__icon">
 					<IconButton>
 						<FlashOnIcon />
@@ -36,7 +49,14 @@ const Header = () => {
 						<IconButton>
 							<VideoLibraryIcon />
 						</IconButton>
-						<p className="header__icon-text">Watchlist</p>
+						<p
+							className="header__icon-text"
+							style={{
+								display: active === "/watchlist" ? "inline-block" : "none",
+							}}
+						>
+							Watchlist
+						</p>
 					</div>
 				</Link>
 				<div className="header__icon">

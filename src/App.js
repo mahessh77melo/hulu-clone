@@ -33,6 +33,7 @@ function App() {
 					<Results genre={genre} />
 				</Route>
 				<Route path="/watchlist" exact>
+					<Header />
 					<WatchList watchList={watchList} setWatchList={setWatchList} />
 				</Route>
 			</Router>

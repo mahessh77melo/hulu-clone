@@ -2,12 +2,12 @@
 	display: flex;
 	flex-direction: column;
 	width: 32rem;
-	max-height: 35rem;
+	max-height: 33rem;
 	align-items: center;
 	border-radius: 3px;
 	margin: 2rem;
 	color: white;
-	margin-bottom: 10rem;
+	margin-bottom: 4rem;
 	padding: 0 0.5rem;
 	border: 3px solid transparent;
 	box-shadow: 0 0.4rem 0.6rem rgba(0, 0, 0, 0.4);
@@ -29,7 +29,7 @@
 }
 .vert-card:hover {
 	transition: all 0.15s ease-out;
-	max-height: 45rem;
+	max-height: 43rem;
 	border: 3px solid #051421;
 	box-shadow: 0 2rem 2.2rem rgba(0, 0, 0, 0.7);
 	background-image: linear-gradient(
@@ -39,7 +39,7 @@
 		#022b18 55%,
 		#01381f 70%
 	);
-	margin-bottom: 0rem;
+	margin-bottom: -6rem;
 	transform: translateY(-2rem);
 }
 .vert-card:hover .card__statement {
