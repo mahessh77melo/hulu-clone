@@ -32,41 +32,33 @@ const Search = () => {
 		}
 		fetchResults();
 	};
-	const movieStyle = {
-		borderTopLeftRadius: "10px",
-		borderBottomLeftRadius: "10px",
-		backgroundColor: media === "movie" ? "whitesmoke" : "#022b18",
-		color: media === "tv" ? "whitesmoke" : "#022b18",
-		outline: "None",
-		boxShadow:
-			media === "movie"
-				? "0 -0.9rem 0.9rem rgba(0,0,0,0.6) inset,-0.5rem 0 0.9rem rgba(0,0,0,0.55) inset"
-				: "none",
+	const commonStyle = {
 		border: "None",
 		fontSize: "2rem",
+		outline: "None",
 		padding: "1.5rem",
 		cursor: "pointer",
 		transition: "all .2s",
 		fontFamily: '"Lato",sans-serif',
 		fontWeight: "500",
 	};
+	const movieStyle = {
+		borderTopLeftRadius: "10px",
+		borderBottomLeftRadius: "10px",
+		backgroundColor: media === "movie" ? "whitesmoke" : "#022b18",
+		color: media === "tv" ? "whitesmoke" : "#022b18",
+		boxShadow:
+			media === "movie" ? "0 -0.9rem 0.9rem rgba(0,0,0,0.6) inset" : "none",
+		...commonStyle,
+	};
 	const tvStyle = {
 		borderTopRightRadius: "10px",
 		borderBottomRightRadius: "10px",
 		color: media === "movie" ? "whitesmoke" : "#022b18",
 		backgroundColor: media === "tv" ? "whitesmoke" : "#022b18",
-		border: "None",
 		boxShadow:
-			media === "tv"
-				? "0 -0.9rem 0.9rem rgba(0,0,0,0.6) inset,-0.5rem 0 0.9rem rgba(0,0,0,0.55) inset"
-				: "none",
-		fontSize: "2rem",
-		outline: "None",
-		padding: "1.5rem",
-		cursor: "pointer",
-		transition: "all .2s",
-		fontFamily: '"Lato",sans-serif',
-		fontWeight: "500",
+			media === "tv" ? "0 -0.9rem 0.9rem rgba(0,0,0,0.6) inset" : "none",
+		...commonStyle,
 	};
 
 	return (
