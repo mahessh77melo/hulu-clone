@@ -32,12 +32,21 @@ const Header = () => {
 						</p>
 					</div>
 				</Link>
-				<div className="header__icon">
-					<IconButton>
-						<FlashOnIcon />
-					</IconButton>
-					<p className="header__icon-text">Trending</p>
-				</div>
+				<Link style={{ textDecoration: "none" }} to="/trending">
+					<div className="header__icon">
+						<IconButton>
+							<FlashOnIcon />
+						</IconButton>
+						<p
+							className="header__icon-text"
+							style={{
+								display: active === "/trending" ? "inline-block" : "none",
+							}}
+						>
+							Trending
+						</p>
+					</div>
+				</Link>
 				<div className="header__icon">
 					<IconButton>
 						<LiveTvIcon />

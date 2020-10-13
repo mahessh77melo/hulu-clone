@@ -18,6 +18,7 @@ const Detail = ({ watchList, setWatchList }) => {
 		async function getCurrent(id, media) {
 			const movie = await axios.get(`${media}/${id}?api_key=${api_key}`);
 			setCurrent(movie.data);
+			console.log(movie.data);
 		}
 		getCurrent(movieID, mediaType);
 	}, [movieID, mediaType]);
@@ -54,6 +55,9 @@ const Detail = ({ watchList, setWatchList }) => {
 						</p>
 					) : (
 						""
+					)}
+					{current.runtime && (
+						<p className="detail__country">Run-time : {current.runtime} mins</p>
 					)}
 					<p className="detail__release">
 						Released On :{" "}

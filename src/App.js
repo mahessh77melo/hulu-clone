@@ -11,7 +11,7 @@ import WatchList from "./WatchList";
 import Search from "./Search";
 
 function App() {
-	const [genre, setGenre] = useState(requests.fetchTrending);
+	const [genre, setGenre] = useState(requests.fetchToprated);
 	const [watchList, setWatchList] = useState(initValue);
 
 	return (
@@ -24,6 +24,11 @@ function App() {
 					<Header />
 					<Nav setGenre={setGenre} />
 					<Results genre={genre} />
+				</Route>
+				<Route path="/trending" exact>
+					<Header />
+					<Nav setGenre={setGenre} />
+					<Results genre={requests.fetchTrending} />
 				</Route>
 				<Route path="/watchlist" exact>
 					<Header />

@@ -7,12 +7,6 @@ const Nav = ({ setGenre }) => {
 		<div className="nav">
 			<h2
 				className="nav__item"
-				onClick={() => setGenre(requests.fetchTrending)}
-			>
-				Trending
-			</h2>
-			<h2
-				className="nav__item"
 				onClick={() => setGenre(requests.fetchToprated)}
 			>
 				Top Rated

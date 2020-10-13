@@ -10,7 +10,6 @@ import "./VertCard.css";
 
 const VertCard = ({ movie, setWatchList }) => {
 	const base = "https://image.tmdb.org/t/p/original/";
-	console.log(movie);
 	return (
 		<div className="vert-card">
 			<Link
@@ -44,15 +43,14 @@ const VertCard = ({ movie, setWatchList }) => {
 				</div>
 
 				<div className="delete">
-					<IconButton>
-						<DeleteIcon
-							onClick={() =>
-								setWatchList((prev) => {
-									console.log(prev.filter((item) => item.idn != movie.id));
-									return prev.filter((item) => item.idn != movie.id);
-								})
-							}
-						/>
+					<IconButton
+						onClick={() =>
+							setWatchList((prev) => {
+								return prev.filter((item) => item.idn !== movie.id);
+							})
+						}
+					>
+						<DeleteIcon />
 					</IconButton>
 				</div>
 			</div>

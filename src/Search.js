@@ -53,8 +53,8 @@ const Search = () => {
 	const tvStyle = {
 		borderTopRightRadius: "10px",
 		borderBottomRightRadius: "10px",
-		color: media == "movie" ? "whitesmoke" : "#022b18",
-		backgroundColor: media == "tv" ? "whitesmoke" : "#022b18",
+		color: media === "movie" ? "whitesmoke" : "#022b18",
+		backgroundColor: media === "tv" ? "whitesmoke" : "#022b18",
 		border: "None",
 		boxShadow:
 			media === "tv"

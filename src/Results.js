@@ -20,11 +20,7 @@ const Results = ({ genre }) => {
 
 	return (
 		<div className="results">
-			<FlipMove
-				appearAnimation="fade"
-				enterAnimation="fade"
-				leaveAnimation="elevator"
-			>
+			<FlipMove enterAnimation="accordionVertical" leaveAnimation="fade">
 				{movies.map((movie) => (
 					<VideoCard movie={movie} key={movie.id} />
 				))}
