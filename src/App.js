@@ -27,7 +27,19 @@ function App() {
 				</Route>
 				<Route path="/trending" exact>
 					<Header />
-					<Nav setGenre={setGenre} />
+					{/* <Nav setGenre={setGenre} /> */}
+					<div style={{ marginLeft: "3rem" }} className="detail__one">
+						<h2
+							style={{
+								color: "whitesmoke",
+								fontSize: "5rem",
+							}}
+							className="detail__title"
+						>
+							{" "}
+							Trending right now
+						</h2>
+					</div>
 					<Results genre={requests.fetchTrending} />
 				</Route>
 				<Route path="/watchlist" exact>
