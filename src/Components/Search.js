@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
-import axios from "./axios";
-import "./Search.css";
+import axios from "../js/axios";
 import VideoCard from "./VideoCard";
 import { IconButton } from "@material-ui/core";
+import { api_key } from "../js/requests";
+import "../Styles/Search.css";
 
 const Search = () => {
-	const api_key = "441508ec84fd07866da08c667c78b4fb";
 	const getInitValue = () => {
 		if (localStorage.searchRes) {
 			return JSON.parse(localStorage.searchRes);
@@ -103,8 +103,8 @@ const Search = () => {
 						id="search"
 						value={search}
 					/>
-					<IconButton>
-						<SearchIcon onClick={getQuery} />
+					<IconButton onClick={getQuery}>
+						<SearchIcon />
 					</IconButton>
 				</div>
 				<div className="search-results">

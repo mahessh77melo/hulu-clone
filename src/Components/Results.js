@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import "./Results.css";
 import VideoCard from "./VideoCard";
-import axios from "./axios";
+import axios from "../js/axios";
 import FlipMove from "react-flip-move";
+import "../Styles/Results.css";
 
 const Results = ({ genre }) => {
 	const [movies, setMovies] = useState([]);
@@ -29,4 +29,4 @@ const Results = ({ genre }) => {
 	);
 };
 
-export { Results };
+export default Results;

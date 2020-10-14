@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from "react";
-import "./Detail.css";
+import "../Styles/Detail.css";
 import { useParams } from "react-router-dom";
-import axios from "./axios";
-import createRipple from "./createRipple";
+import axios from "../js/axios";
+import createRipple from "../js/createRipple";
 import StarIcon from "@material-ui/icons/Star";
 import SubdirectoryArrowRightIcon from "@material-ui/icons/SubdirectoryArrowRight";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import { api_key } from "../js/requests";
 
 const Detail = ({ watchList, setWatchList }) => {
 	const { movieID, mediaType } = useParams();
-	const api_key = "441508ec84fd07866da08c667c78b4fb";
 	const [current, setCurrent] = useState(4);
 	const base = "https://image.tmdb.org/t/p/original/";
 	console.log(movieID);

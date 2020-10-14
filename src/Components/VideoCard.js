@@ -1,9 +1,9 @@
 import React, { forwardRef } from "react";
-import "./VideoCard.css";
 import GradeIcon from "@material-ui/icons/Grade";
 import FavoriteIcon from "@material-ui/icons/Favorite";
 import TextTruncate from "react-text-truncate";
 import { Link } from "react-router-dom";
+import "../Styles/VideoCard.css";
 
 const VideoCard = forwardRef(({ movie }, ref) => {
 	const base = "https://image.tmdb.org/t/p/original/";

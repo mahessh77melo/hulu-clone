@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import axios from "./axios";
-import "./WatchList.css";
+import axios from "../js/axios";
+import { api_key } from "../js/requests";
 import VertCard from "./VertCard";
+import "../Styles/WatchList.css";
 
 const WatchList = ({ watchList, setWatchList }) => {
-	const api_key = "441508ec84fd07866da08c667c78b4fb";
 	const [Movies, setMovies] = useState([]);
 	const [loading, setLoading] = useState(true);
 

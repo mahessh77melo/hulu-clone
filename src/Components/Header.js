@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import "./Header.css";
 import HomeIcon from "@material-ui/icons/Home";
 import FlashOnIcon from "@material-ui/icons/FlashOn";
 import LiveTvIcon from "@material-ui/icons/LiveTv";
@@ -8,6 +7,7 @@ import SearchIcon from "@material-ui/icons/Search";
 import PersonOutlineIcon from "@material-ui/icons/PersonOutline";
 import { IconButton } from "@material-ui/core";
 import { Link } from "react-router-dom";
+import "../Styles/Header.css";
 
 const Header = () => {
 	const [active, setActive] = useState("Home");
