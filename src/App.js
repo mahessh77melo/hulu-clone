@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Header from "../Components/Header";
-import Nav from "../Components/Nav";
-import Results from "../Components/Results";
-import Detail from "../Components/Detail";
+import Header from "./Components/Header";
+import Nav from "./Components/Nav";
+import Results from "./Components/Results";
+import Detail from "./Components/Detail";
 import { BrowserRouter as Router, Route } from "react-router-dom";
-import requests, { initValue } from "./requests";
-import WatchList from "../Components/WatchList";
-import Search from "../Components/Search";
+import requests, { initValue } from "./js/requests";
+import WatchList from "./Components/WatchList";
+import Search from "./Components/Search";
 import "./Styles/App.css";
 import "./Styles/WatchList.css";
 
