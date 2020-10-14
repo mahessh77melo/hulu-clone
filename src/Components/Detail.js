@@ -2,13 +2,17 @@ import React, { useEffect, useState } from "react";
 import "../Styles/Detail.css";
 import { useParams } from "react-router-dom";
 import axios from "../js/axios";
+import { Link } from "react-router-dom";
 import createRipple from "../js/createRipple";
 import StarIcon from "@material-ui/icons/Star";
+import HomeIcon from "@material-ui/icons/Home";
+import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import SubdirectoryArrowRightIcon from "@material-ui/icons/SubdirectoryArrowRight";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
 import { api_key } from "../js/requests";
+import { IconButton } from "@material-ui/core";
 
 const Detail = ({ watchList, setWatchList }) => {
 	const { movieID, mediaType } = useParams();
@@ -23,6 +27,14 @@ const Detail = ({ watchList, setWatchList }) => {
 		}
 		getCurrent(movieID, mediaType);
 	}, [movieID, mediaType]);
+
+	const LinkStyles = {
+		textDecoration: "none",
+		marginLeft: "3rem",
+		color: "whitesmoke",
+		fontSize: "4rem",
+	};
+
 	return (
 		<div className="detail">
 			<div className="detail__left">
@@ -90,6 +102,16 @@ const Detail = ({ watchList, setWatchList }) => {
 							<AddCircleOutlineIcon /> Add to Watchlist
 						</button>
 					)}
+					<Link to="/">
+						<IconButton>
+							<HomeIcon style={LinkStyles} />
+						</IconButton>
+					</Link>
+					<Link to="/watchlist">
+						<IconButton>
+							<VideoLibraryIcon style={LinkStyles} />
+						</IconButton>
+					</Link>
 				</div>
 			</div>
 		</div>
