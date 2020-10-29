@@ -108,14 +108,23 @@ const Search = () => {
 					</IconButton>
 				</div>
 				<div className="search-results">
-					{results &&
+					{results.length ? (
 						results.map((movie) =>
 							movie.poster_path ? (
 								<VideoCard movie={movie} key={movie.id} />
 							) : (
 								""
 							)
-						)}
+						)
+					) : (
+						<div className="no-results">
+							No results found{" "}
+							<span role="img" aria-label="jsx-a11y/accessible-emoji">
+								😒
+							</span>
+							.
+						</div>
+					)}
 				</div>
 			</div>
 		</>

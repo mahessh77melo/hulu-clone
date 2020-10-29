@@ -19,13 +19,15 @@ const Results = ({ genre }) => {
 	}, [genre]);
 
 	return (
-		<div className="results">
-			<FlipMove enterAnimation="accordionVertical" leaveAnimation="fade">
-				{movies.map((movie) => (
-					<VideoCard movie={movie} key={movie.id} />
-				))}
-			</FlipMove>
-		</div>
+		movies.length && (
+			<div className="results">
+				<FlipMove enterAnimation="accordionVertical" leaveAnimation="fade">
+					{movies.map((movie) => (
+						<VideoCard movie={movie} key={movie.id} />
+					))}
+				</FlipMove>
+			</div>
+		)
 	);
 };
 
