@@ -26,11 +26,12 @@
 .vert-card:hover .vert-card__image {
 	transition: 0.5s ease-out;
 	filter: saturate(125%);
+	transform: scale(1.175);
 }
 .vert-card:hover {
 	transition: all 0.15s ease-out;
 	max-height: 45rem;
-	border: 3px solid #051421;
+	border-radius: 0px;
 	box-shadow: 0 2rem 2.2rem rgba(0, 0, 0, 0.7);
 	background-image: linear-gradient(
 		45deg,
@@ -40,7 +41,7 @@
 		#01381f 70%
 	);
 	margin-bottom: -6rem;
-	transform: translateY(-2rem);
+	transform: translateY(-2rem) scale(1.075);
 }
 .vert-card:hover .card__statement {
 	visibility: visible;
