@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SearchIcon from "@material-ui/icons/Search";
 import axios from "../js/axios";
 import VideoCard from "./VideoCard";
@@ -14,9 +14,13 @@ const Search = () => {
 			return [];
 		}
 	};
+	const inputField = useRef();
 	const [search, setSearch] = useState("");
 	const [media, setMedia] = useState("movie");
 	const [results, setResults] = useState(getInitValue());
+	useEffect(() => {
+		inputField.current.focus();
+	}, []);
 	const getQuery = (e) => {
 		e.preventDefault();
 		async function fetchResults() {
@@ -85,6 +89,7 @@ const Search = () => {
 						type="text"
 						className="search-bar__input"
 						name="search"
+						ref={inputField}
 						placeholder={
 							media === "movie" ? "Search for a Movie" : "Search for a TV Show"
 						}
