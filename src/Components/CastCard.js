@@ -6,7 +6,12 @@ const CastCard = ({ member }) => {
 
 	return (
 		<>
-			<div className="cast-card">
+			<a
+				className="cast-card"
+				href={`https://en.wikipedia.org/wiki/${member.name
+					.split(" ")
+					.join("_")}`}
+			>
 				<img
 					className="cast-card__backdrop"
 					src={`${base}${member.profile_path}`}
@@ -16,7 +21,7 @@ const CastCard = ({ member }) => {
 					<p className="og-name">{member.name} as </p>
 					<p className="movie-name">{member.character}</p>
 				</div>
-			</div>
+			</a>
 		</>
 	);
 };

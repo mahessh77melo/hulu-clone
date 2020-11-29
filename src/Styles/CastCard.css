@@ -8,6 +8,7 @@
 	position: relative;
 	cursor: pointer;
 	transition: all 0.3s ease-out;
+	text-decoration: none;
 }
 .cast-card__backdrop {
 	object-fit: cover;
