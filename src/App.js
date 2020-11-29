@@ -12,7 +12,7 @@ import "./Styles/WatchList.css";
 import Cast from "./Components/Cast";
 
 function App() {
-	const [genre, setGenre] = useState(requests.fetchToprated);
+	const [genre, setGenre] = useState(requests.fetchAction);
 	const [watchList, setWatchList] = useState(initValue);
 
 	return (

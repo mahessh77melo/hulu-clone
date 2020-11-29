@@ -3,6 +3,7 @@
 	flex-wrap: wrap;
 	align-content: center;
 	justify-content: space-around;
+	min-height: 100vh;
 }
 .title {
 	font-size: 4.5rem;
