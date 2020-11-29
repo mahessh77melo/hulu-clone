@@ -37,7 +37,8 @@ const Cast = () => {
 				Director :{" "}
 				{crew?.find((member) => member.job === "Director")?.name ||
 					crew?.find((member) => member.known_for_department === "Writing")
-						.name}
+						?.name ||
+					"Unknown"}
 			</h3>
 			{cast?.map(
 				(member) =>
