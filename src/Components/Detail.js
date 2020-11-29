@@ -21,9 +21,15 @@ const Detail = ({ watchList, setWatchList }) => {
 	console.log(movieID);
 	useEffect(() => {
 		async function getCurrent(id, media) {
-			const movie = await axios.get(`${media}/${id}?api_key=${api_key}`);
-			setCurrent(movie.data);
-			console.log(movie.data);
+			try {
+				const movie = await axios.get(`${media}/${id}?api_key=${api_key}`);
+				setCurrent(movie.data);
+				console.log(movie.data);
+				console.log(current);
+				console.log(`${media}/${id}?api_key=${api_key}`);
+			} catch (error) {
+				console.log(error);
+			}
 		}
 		getCurrent(movieID, mediaType);
 	}, [movieID, mediaType]);
@@ -35,7 +41,7 @@ const Detail = ({ watchList, setWatchList }) => {
 		fontSize: "4rem",
 	};
 
-	return (
+	return current ? (
 		<div className="detail">
 			<div className="detail__left">
 				<img
@@ -130,6 +136,8 @@ const Detail = ({ watchList, setWatchList }) => {
 				</div>
 			</div>
 		</div>
+	) : (
+		"API failed to send back Data"
 	);
 };
 
