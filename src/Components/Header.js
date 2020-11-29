@@ -84,7 +84,7 @@ const Header = () => {
 					<IconButton>
 						<GitHubIcon />
 					</IconButton>
-					<p className="header__icon-text">GitHub repo</p>
+					<p className="header__icon-text">GitHub</p>
 				</a>
 			</div>
 			<img
