@@ -16,7 +16,7 @@ import { IconButton } from "@material-ui/core";
 
 const Detail = ({ watchList, setWatchList }) => {
 	const { movieID, mediaType } = useParams();
-	const [current, setCurrent] = useState(4);
+	const [current, setCurrent] = useState();
 	const base = "https://image.tmdb.org/t/p/original/";
 	console.log(movieID);
 	useEffect(() => {

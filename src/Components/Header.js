@@ -3,6 +3,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import FlashOnIcon from "@material-ui/icons/FlashOn";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import SearchIcon from "@material-ui/icons/Search";
+import GitHubIcon from "@material-ui/icons/GitHub";
 import { IconButton } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import "../Styles/Header.css";
@@ -76,6 +77,15 @@ const Header = () => {
 						</p>
 					</div>
 				</Link>
+				<a
+					className="header__icon"
+					href="https://github.com/mahessh77melo/hulu-clone"
+				>
+					<IconButton>
+						<GitHubIcon />
+					</IconButton>
+					<p className="header__icon-text">GitHub repo</p>
+				</a>
 			</div>
 			<img
 				className="header__logo"
