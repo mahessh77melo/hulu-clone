@@ -46,7 +46,11 @@ const VertCard = ({ movie, setWatchList }) => {
 					<IconButton
 						onClick={() =>
 							setWatchList((prev) => {
-								return prev.filter((item) => item.idn !== movie.id);
+								const newWatchList = prev.filter(
+									(item) => item.idn !== movie.id
+								);
+								localStorage.huluWatchList = JSON.stringify(newWatchList);
+								return newWatchList;
 							})
 						}
 					>

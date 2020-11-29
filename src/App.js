@@ -9,6 +9,7 @@ import WatchList from "./Components/WatchList";
 import Search from "./Components/Search";
 import "./Styles/App.css";
 import "./Styles/WatchList.css";
+import Cast from "./Components/Cast";
 
 function App() {
 	const [genre, setGenre] = useState(requests.fetchToprated);
@@ -37,6 +38,10 @@ function App() {
 				<Route path="/search">
 					<Header />
 					<Search />
+				</Route>
+				<Route path="/:mediaType/:movieID/cast" exact>
+					<Header />
+					<Cast />
 				</Route>
 			</Router>
 		</div>

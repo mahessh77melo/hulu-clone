@@ -5,7 +5,7 @@ import axios from "../js/axios";
 import { Link } from "react-router-dom";
 import createRipple from "../js/createRipple";
 import StarIcon from "@material-ui/icons/Star";
-import HomeIcon from "@material-ui/icons/Home";
+import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import SubdirectoryArrowRightIcon from "@material-ui/icons/SubdirectoryArrowRight";
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
@@ -78,7 +78,16 @@ const Detail = ({ watchList, setWatchList }) => {
 					</p>
 				</div>
 				<div className="detail__buttons">
-					<button className="btn btn-play">
+					<button
+						className="btn btn-play"
+						onClick={() => {
+							alert(
+								`Did you seriously think you can watch ${
+									current.title || current.name
+								} for free?? 🤣🤣 Come on now!!!`
+							);
+						}}
+					>
 						<PlayCircleOutlineIcon /> Watch Now
 					</button>
 					{watchList.filter((item) => item.idn === current.id).length ? (
@@ -92,19 +101,21 @@ const Detail = ({ watchList, setWatchList }) => {
 								createRipple(event);
 								setWatchList((prev) => {
 									console.log(prev);
-									return prev.concat({
+									const newWatchList = prev.concat({
 										idn: current.id,
 										mediaType: mediaType,
 									});
+									localStorage.huluWatchList = JSON.stringify(newWatchList);
+									return newWatchList;
 								});
 							}}
 						>
 							<AddCircleOutlineIcon /> Add to Watchlist
 						</button>
 					)}
-					<Link to="/">
+					<Link to={`/${mediaType}/${movieID}/cast`}>
 						<IconButton>
-							<HomeIcon style={LinkStyles} />
+							<SupervisorAccountIcon style={LinkStyles} />
 						</IconButton>
 					</Link>
 					<Link to="/watchlist">

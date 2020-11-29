@@ -1,0 +1,19 @@
+.cast-container {
+	display: flex;
+	flex-wrap: wrap;
+	align-content: center;
+	justify-content: space-around;
+}
+.title {
+	font-size: 4.5rem;
+	letter-spacing: 2px;
+	color: whitesmoke;
+	margin: 1.5rem 2rem;
+	display: inline-block;
+	width: 80%;
+	text-align: center;
+}
+.director {
+	font-size: 3rem;
+	text-align: right;
+}
