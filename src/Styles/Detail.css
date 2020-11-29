@@ -88,7 +88,7 @@
 	color: #232323;
 }
 span.ripple {
-	position: absolute; /* The absolute position we mentioned earlier */
+	position: absolute;
 	border-radius: 50%;
 	transform: scale(0);
 	animation: ripple 600ms linear;
@@ -103,4 +103,8 @@ span.ripple {
 }
 .btn-watchlist:active {
 	color: #141414;
+}
+.btn-cast:hover {
+	transform: scale(1.02) translateY(-0.4rem);
+	color: #232323;
 }

@@ -18,23 +18,30 @@ const Cast = () => {
 			setCast(raw.data.cast);
 			setCrew(raw.data.crew);
 			setMovie(movieRaw.data);
+			console.log(movieRaw.data);
 		};
 		getCast();
 	}, [media, id]);
+
 	return (
 		<div className="cast-container">
 			<h1 className="title">
 				{" "}
-				Casting of {movie?.title || movie?.original_title}
+				Casting of{" "}
+				{movie?.title ||
+					movie?.original_title ||
+					movie?.name ||
+					movie?.original_name}
 			</h1>
 			<h3 className="title director">
-				Director : {crew?.find((member) => member.job === "Director").name}
+				Director :{" "}
+				{crew?.find((member) => member.job === "Director")?.name ||
+					crew?.find((member) => member.known_for_department === "Writing")
+						.name}
 			</h3>
 			{cast?.map(
 				(member) =>
-					member.profile_path && (
-						<CastCard key={member.cast_id} member={member} />
-					)
+					member.profile_path && <CastCard key={member.id} member={member} />
 			)}
 		</div>
 	);

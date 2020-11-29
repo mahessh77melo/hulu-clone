@@ -113,10 +113,14 @@ const Detail = ({ watchList, setWatchList }) => {
 							<AddCircleOutlineIcon /> Add to Watchlist
 						</button>
 					)}
-					<Link to={`/${mediaType}/${movieID}/cast`}>
-						<IconButton>
-							<SupervisorAccountIcon style={LinkStyles} />
-						</IconButton>
+					<Link
+						to={`/${mediaType}/${movieID}/cast`}
+						style={{ textDecoration: "none" }}
+					>
+						<button class="btn btn-cast">
+							<SupervisorAccountIcon />
+							Cast
+						</button>
 					</Link>
 					<Link to="/watchlist">
 						<IconButton>

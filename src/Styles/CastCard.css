@@ -21,7 +21,7 @@
 	left: 0;
 	bottom: 0;
 	font-size: 1.6rem;
-	color: white;
+	color: #bbb;
 	background-image: linear-gradient(
 		to top,
 		rgba(0, 0, 0, 0.85),
@@ -50,4 +50,5 @@
 .og-name {
 	text-align: left;
 	font-size: 1.8rem;
+	color: white;
 }
