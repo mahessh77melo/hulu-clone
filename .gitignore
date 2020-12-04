@@ -24,3 +24,6 @@ yarn-error.log*
 
 # api keys
 links.txt
+
+# firebase
+.firebase/hosting.YnVpbGQ.cache
