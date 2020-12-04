@@ -3,14 +3,13 @@ import "../Styles/CastCard.css";
 
 const CastCard = ({ member }) => {
 	const base = "https://image.tmdb.org/t/p/original/";
+	const wikiSearchName = member.name.split(" ").join("_");
 
 	return (
 		<>
 			<a
 				className="cast-card"
-				href={`https://en.wikipedia.org/wiki/${member.name
-					.split(" ")
-					.join("_")}`}
+				href={`https://en.wikipedia.org/wiki/${wikiSearchName}`}
 			>
 				<img
 					className="cast-card__backdrop"

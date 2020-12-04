@@ -12,13 +12,13 @@ const Cast = () => {
 	const { mediaType: media, movieID: id } = useParams();
 	useEffect(() => {
 		const getCast = async () => {
-			const raw = await axios.get(`${media}/${id}/credits?api_key=${api_key}`);
+			const creditsRaw = await axios.get(
+				`${media}/${id}/credits?api_key=${api_key}`
+			);
 			const movieRaw = await axios.get(`${media}/${id}?api_key=${api_key}`);
-			console.log(raw.data);
-			setCast(raw.data.cast);
-			setCrew(raw.data.crew);
+			setCast(creditsRaw.data.cast);
+			setCrew(creditsRaw.data.crew);
 			setMovie(movieRaw.data);
-			console.log(movieRaw.data);
 		};
 		getCast();
 	}, [media, id]);

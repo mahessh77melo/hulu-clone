@@ -8,11 +8,8 @@ const Results = ({ genre }) => {
 	const [movies, setMovies] = useState([]);
 
 	useEffect(() => {
-		console.log("genre " + genre);
 		async function loadResults() {
 			const results = await axios.get(genre);
-			console.log(genre);
-			console.log(results.data.results);
 			setMovies(results.data.results);
 		}
 		loadResults();

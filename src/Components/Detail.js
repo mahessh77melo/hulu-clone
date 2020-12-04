@@ -18,15 +18,11 @@ const Detail = ({ watchList, setWatchList }) => {
 	const { movieID, mediaType } = useParams();
 	const [current, setCurrent] = useState();
 	const base = "https://image.tmdb.org/t/p/original/";
-	console.log(movieID);
 	useEffect(() => {
 		async function getCurrent(id, media) {
 			try {
 				const movie = await axios.get(`${media}/${id}?api_key=${api_key}`);
 				setCurrent(movie.data);
-				console.log(movie.data);
-				console.log(current);
-				console.log(`${media}/${id}?api_key=${api_key}`);
 			} catch (error) {
 				console.log(error);
 			}
@@ -123,7 +119,10 @@ const Detail = ({ watchList, setWatchList }) => {
 						to={`/${mediaType}/${movieID}/cast`}
 						style={{ textDecoration: "none" }}
 					>
-						<button class="btn btn-cast">
+						<button
+							onClick={(event) => createRipple(event)}
+							class="btn btn-cast"
+						>
 							<SupervisorAccountIcon />
 							Cast
 						</button>

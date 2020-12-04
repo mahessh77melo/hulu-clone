@@ -29,7 +29,6 @@ const Search = () => {
 					.split(" ")
 					.join("+")}`
 			);
-			console.log(res.data);
 			setSearch("");
 			setResults(res.data.results);
 			localStorage.searchRes = JSON.stringify(res.data.results);

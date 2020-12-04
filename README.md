@@ -1,68 +1,38 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Hulu Clone by Mahesh
 
-## Available Scripts
+This is a portfolio project that I did most of the parts on my own. Anyway the thing that started off this project was a youtube video from **[Clever Programmer](https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ)**.
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+I have deployed this app on firebase at [https://hulu-clone-f9922.web.app/](https://hulu-clone-f9922.web.app/).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## What is in it?
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- You can use the surf around the site to find details about your favourite movies.
+- Watchlist functionality is there and you can add *yet to be watched* movies into that list.
+- Movies are segregated by various genres and you can look around for movies in whatever genre you prefer.
+- There is a search functionality available and don't forget to choose whether you are searching for a movie or a tv show. 
+- Casting Page is available, just look for the button. 
+  
+## What's not in it? 
 
-### `npm test`
+- Obviously, you **can't watch** any of the movies or tv shows.
+- The site **hasn't been optimized for mobile view** even a bit, so please don't try seeing this in a mobile view. 
+- There is an unsolved bug, the **page whites out** when you reload or hit *open link in new tab*.
+- Don't try **altering the url**, it won't work either.
+- P.S --> *I am not a firebase expert.*
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+<br>
 
-### `npm run build`
+Support a fellow developer by giving a **star**, although I feel kind of *cringy* when asking for it. 
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Pull requests
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+If you think you are capable of solving the above mentioned bugs, please help me out. You can fork the project and submit a **pull request**. As most of you may know, the command to start the development server is `npm start` in the project directory. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Feel free to give your feedbacks and you can also reach out to me at 
+**Discord** --> @kingJames#2472
+**Instagram** --> @brutall__geek
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Final note : If you are a LeBron James hater, please don't reach out xD.
