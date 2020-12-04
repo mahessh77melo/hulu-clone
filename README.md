@@ -6,13 +6,16 @@ This is a portfolio project that I did most of the parts on my own. Anyway the t
 
 I have deployed this app on firebase at [https://hulu-clone-f9922.web.app/](https://hulu-clone-f9922.web.app/).
 
+---
+
 ## What is in it?
 
-- You can use the surf around the site to find details about your favourite movies.
+- You can surf around the site to find details about your favourite movies.
 - Watchlist functionality is there and you can add *yet to be watched* movies into that list.
 - Movies are segregated by various genres and you can look around for movies in whatever genre you prefer.
 - There is a search functionality available and don't forget to choose whether you are searching for a movie or a tv show. 
 - Casting Page is available, just look for the button. 
+- Some of uour local language movies may be available, try looking for them.
   
 ## What's not in it? 
 
@@ -29,10 +32,13 @@ Support a fellow developer by giving a **star**, although I feel kind of *cringy
 
 ## Pull requests
 
-If you think you are capable of solving the above mentioned bugs, please help me out. You can fork the project and submit a **pull request**. As most of you may know, the command to start the development server is `npm start` in the project directory. 
+If you think you are capable of solving the above mentioned bugs, please help me out. You can fork the project and submit a **pull request**. You can also do it with the latest *GitHub Cli* with the command `gh repo fork mahessh77melo/hulu-clone --clone`. Commit your changes in a new branch and then `gh pr create`.
+As most of you may know, the command to start the development server is `npm start` in the project directory. 
 
 Feel free to give your feedbacks and you can also reach out to me at 
+
 **Discord** --> @kingJames#2472
+
 **Instagram** --> @brutall__geek
 
 Final note : If you are a LeBron James hater, please don't reach out xD.
