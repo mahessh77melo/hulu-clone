@@ -32,10 +32,13 @@ Support a fellow developer by giving a **star**, although I feel kind of *cringy
 
 ## Pull requests
 
-If you think you are capable of solving the above mentioned bugs, please help me out. You can fork the project and submit a **pull request**. As most of you may know, the command to start the development server is `npm start` in the project directory. 
+If you think you are capable of solving the above mentioned bugs, please help me out. You can fork the project and submit a **pull request**. You can also do it with the latest *GitHub Cli* with the command `gh repo fork mahessh77melo/hulu-clone --clone`. Commit your changes in a new branch and then `gh pr create`.
+As most of you may know, the command to start the development server is `npm start` in the project directory. 
 
 Feel free to give your feedbacks and you can also reach out to me at 
+
 **Discord** --> @kingJames#2472
+
 **Instagram** --> @brutall__geek
 
 Final note : If you are a LeBron James hater, please don't reach out xD.
