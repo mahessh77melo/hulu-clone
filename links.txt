@@ -1,9 +1,4 @@
-api key : 441508ec84fd07866da08c667c78b4fb
 
-example request : https://api.themoviedb.org/3/movie/550?api_key=441508ec84fd07866da08c667c78b4fb
-
-	API Read Access Token (v4 auth);
-	eyJhbGciOiJIUzI1NiJ9eyJhdWQiOiI0NDE1MDhlYzg0ZmQwNzg2NmRhMDhjNjY3Yzc4YjRmYiIsInN1YiI6IjVmNjA0Yzc1ZmQ3YWE0MDAzYmYyOGZmYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ5uyOfT3053ViDSUeb39M2dp6xOACB_RDl6it_1_cPIQ
 
 
 	backdrop_path: "/mGVrXeIjyecj6TKmwPVpHlscEmw.jpg"
@@ -33,3 +28,22 @@ poster_path: "/mY7SeH4HFFxW1hiI6cWuwCRKptN.jpg"
 vote_average: 8.4
 ​​​​
 vote_count: 1857
+
+____________________________________________________________________________
+
+{
+  adult: false,
+  backdrop_path: '/ffJff2KWHd2rbwYWPRxKxTBypRB.jpg',
+  genre_ids: [ 80, 18 ],
+  id: 168672,
+  original_language: 'en',
+  original_title: 'American Hustle',
+  overview: 'A conman and his seductive partner are forced to work for a wild FBI agent, who pushes them into a world of Jersey power-brokers and the Mafia.',
+  popularity: 16.776,
+  poster_path: '/koXGRfatN0tURFWMA0Keb0p0Gtg.jpg',
+  release_date: '2013-12-12',
+  title: 'American Hustle',
+  video: false,
+  vote_average: 6.8,
+  vote_count: 5517
+}
