@@ -15,7 +15,7 @@ I have deployed this app on firebase at [https://hulu-clone-f9922.web.app/](http
 - Movies are segregated by various genres and you can look around for movies in whatever genre you prefer.
 - There is a search functionality available and don't forget to choose whether you are searching for a movie or a tv show. 
 - Casting Page is available, just look for the button. 
-- Some of uour local language movies may be available, try looking for them.
+- Some of your local language movies may be available, try looking for them.
   
 ## What's not in it? 
 
