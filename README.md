@@ -19,7 +19,7 @@ I have deployed this app on firebase at [https://hulu-clone-f9922.web.app/](http
   
 ## What's not in it? 
 
-- Obviously, you **can't watch** any of the movies or tv shows. This is just a project my resume.
+- Obviously, you **can't watch** any of the movies or tv shows. This is just a project for my resume.
 - The site **hasn't been optimized for mobile view** even a bit, so please don't try seeing this in a mobile view. 
 - ~~There is an unsolved bug, the **page whites out** when you reload or hit *open link in new tab*.~~
 - ~~Don't try **altering the url**, it won't work either.~~
