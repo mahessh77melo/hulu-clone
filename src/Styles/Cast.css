@@ -4,6 +4,7 @@
 	align-content: center;
 	justify-content: space-around;
 	min-height: 100vh;
+	padding: 5rem 0;
 }
 .title {
 	font-size: 4.5rem;

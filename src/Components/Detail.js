@@ -121,7 +121,7 @@ const Detail = ({ watchList, setWatchList }) => {
 					>
 						<button
 							onClick={(event) => createRipple(event)}
-							class="btn btn-cast"
+							className="btn btn-cast"
 						>
 							<SupervisorAccountIcon />
 							Cast

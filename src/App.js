@@ -40,7 +40,6 @@ function App() {
 					<Search />
 				</Route>
 				<Route path="/:mediaType/:movieID/cast" exact>
-					<Header />
 					<Cast />
 				</Route>
 			</Router>
