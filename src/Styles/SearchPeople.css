@@ -1,0 +1,7 @@
+.search-people {
+	min-height: 88vh;
+}
+.search-people-results {
+	display: flex;
+	flex-wrap: wrap;
+}

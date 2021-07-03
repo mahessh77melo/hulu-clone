@@ -6,7 +6,7 @@ import { IconButton } from "@material-ui/core";
 import { api_key } from "../js/requests";
 import "../Styles/Search.css";
 
-const Search = () => {
+const Search = ({ type }) => {
 	const getInitValue = () => {
 		if (localStorage.searchRes) {
 			return JSON.parse(localStorage.searchRes);
@@ -16,7 +16,7 @@ const Search = () => {
 	};
 	const inputField = useRef();
 	const [search, setSearch] = useState("");
-	const [media, setMedia] = useState("movie");
+	const [media, setMedia] = useState(type || "movie");
 	const [results, setResults] = useState(getInitValue());
 	useEffect(() => {
 		inputField.current.focus();
@@ -30,6 +30,7 @@ const Search = () => {
 					.join("+")}`
 			);
 			setSearch("");
+			console.log(res.data);
 			setResults(res.data.results);
 			localStorage.searchRes = JSON.stringify(res.data.results);
 		}
@@ -68,29 +69,38 @@ const Search = () => {
 		<>
 			<div className="search">
 				<div className="search-bar">
-					<div className="togglers">
-						<button
-							onClick={() => setMedia("movie")}
-							style={movieStyle}
-							className="toggler"
-						>
-							Movie
-						</button>
-						<button
-							onClick={() => setMedia("tv")}
-							style={tvStyle}
-							className="toggler"
-						>
-							tv
-						</button>
-					</div>
+					{type ? (
+						""
+					) : (
+						<div className="togglers">
+							<button
+								onClick={() => setMedia("movie")}
+								style={movieStyle}
+								className="toggler"
+							>
+								Movie
+							</button>
+							<button
+								onClick={() => setMedia("tv")}
+								style={tvStyle}
+								className="toggler"
+							>
+								tv
+							</button>
+						</div>
+					)}
+
 					<input
 						type="text"
 						className="search-bar__input"
 						name="search"
 						ref={inputField}
 						placeholder={
-							media === "movie" ? "Search for a Movie" : "Search for a TV Show"
+							media === "movie"
+								? "Search for a Movie"
+								: media === "person"
+								? "Search for a person"
+								: "Search for a TV Show"
 						}
 						onChange={(e) => {
 							if (e.key !== "Enter") setSearch(e.target.value);
@@ -99,7 +109,6 @@ const Search = () => {
 							// e.preventDefault();
 							if (e.key !== "Enter") return;
 							else if (e.key === "Enter" && search.length > 0) {
-								console.log("enter");
 								console.log(e);
 								getQuery(e);
 							}

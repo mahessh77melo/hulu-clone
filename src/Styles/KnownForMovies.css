@@ -1,0 +1,30 @@
+.kfm {
+	min-height: 100vh;
+}
+
+.kfm__fields {
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+}
+.kfm__field {
+	color: white;
+	text-align: right;
+	font-size: 2rem;
+	letter-spacing: 3px;
+	padding: 1rem;
+}
+.movies-list {
+	display: flex;
+	flex-wrap: wrap;
+}
+.bio {
+	font-size: 1.6rem;
+	text-align: left;
+	letter-spacing: 0;
+}
+.name {
+	text-align: center;
+	font-size: 5rem;
+	font-weight: 700;
+}

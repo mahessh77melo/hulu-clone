@@ -7,9 +7,11 @@ import { BrowserRouter as Router, Route } from "react-router-dom";
 import requests, { initValue } from "./js/requests";
 import WatchList from "./Components/WatchList";
 import Search from "./Components/Search";
+import SearchPeople from "./Components/SearchPeople";
 import "./Styles/App.css";
 import "./Styles/WatchList.css";
 import Cast from "./Components/Cast";
+import KnownForMovies from "./Components/KnownForMovies";
 
 function App() {
 	const [genre, setGenre] = useState(requests.fetchAction);
@@ -38,6 +40,13 @@ function App() {
 				<Route path="/search">
 					<Header />
 					<Search />
+				</Route>
+				<Route path="/searchPeople" exact>
+					<Header />
+					<SearchPeople />
+				</Route>
+				<Route path="/searchPeople/:id/knownfor">
+					<KnownForMovies />
 				</Route>
 				<Route path="/:mediaType/:movieID/cast" exact>
 					<Cast />

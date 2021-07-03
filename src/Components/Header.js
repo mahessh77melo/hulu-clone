@@ -3,6 +3,7 @@ import HomeIcon from "@material-ui/icons/Home";
 import FlashOnIcon from "@material-ui/icons/FlashOn";
 import VideoLibraryIcon from "@material-ui/icons/VideoLibrary";
 import SearchIcon from "@material-ui/icons/Search";
+import PeopleAltIcon from "@material-ui/icons/PeopleAlt";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import { IconButton } from "@material-ui/core";
 import { Link } from "react-router-dom";
@@ -74,6 +75,21 @@ const Header = () => {
 							}}
 						>
 							Search
+						</p>
+					</div>
+				</Link>
+				<Link style={{ textDecoration: "none" }} to="/searchPeople">
+					<div className="header__icon">
+						<IconButton>
+							<PeopleAltIcon />
+						</IconButton>
+						<p
+							className="header__icon-text"
+							style={{
+								display: active === "/searchPeople" ? "inline-block" : "none",
+							}}
+						>
+							People
 						</p>
 					</div>
 				</Link>
