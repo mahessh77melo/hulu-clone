@@ -1,8 +1,8 @@
 import React from "react";
+import { base } from "../js/requests";
 import "../Styles/CastCard.css";
 
 const CastCard = ({ member }) => {
-	const base = "https://image.tmdb.org/t/p/original/";
 	const wikiSearchName = member.name.split(" ").join("_");
 
 	return (

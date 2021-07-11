@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 import LiveTvIcon from "@material-ui/icons/LiveTv";
 import "../Styles/Person.css";
+import { base } from "../js/requests";
 
 const Person = ({ value }) => {
-	const base = "https://image.tmdb.org/t/p/original/";
 	const wikiSearchName = value.name.split(" ").join("_");
 	return (
 		<div className="person">

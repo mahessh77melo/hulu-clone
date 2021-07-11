@@ -7,9 +7,9 @@ import DeleteIcon from "@material-ui/icons/Delete";
 import { IconButton } from "@material-ui/core";
 import "../Styles/VideoCard.css";
 import "../Styles/VertCard.css";
+import { base } from "../js/requests";
 
 const VertCard = ({ movie, setWatchList }) => {
-	const base = "https://image.tmdb.org/t/p/original/";
 	return (
 		<div className="vert-card">
 			<Link

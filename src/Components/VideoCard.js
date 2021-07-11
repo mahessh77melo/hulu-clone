@@ -4,9 +4,9 @@ import FavoriteIcon from "@material-ui/icons/Favorite";
 import TextTruncate from "react-text-truncate";
 import { Link } from "react-router-dom";
 import "../Styles/VideoCard.css";
+import { base } from "../js/requests";
 
 const VideoCard = forwardRef(({ movie }, ref) => {
-	const base = "https://image.tmdb.org/t/p/original/";
 	return (
 		<div className="video-card" ref={ref}>
 			<Link
