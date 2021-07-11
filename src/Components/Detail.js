@@ -97,7 +97,7 @@ const Detail = ({ watchList, setWatchList }) => {
 							to={`/${mediaType}/${movieID}/seasons`}
 							style={{ textDecoration: "none", color: "white" }}
 						>
-							<button className="btn btn-play">
+							<button className="btn btn-watchlist">
 								<PlayCircleOutlineIcon /> Seasons
 							</button>
 						</Link>
