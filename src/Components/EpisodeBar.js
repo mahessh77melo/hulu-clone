@@ -21,7 +21,14 @@ const EpisodeBar = ({ episode: ep }) => {
 			</div>
 			<div className="episode__overview">
 				{overview ? ep.overview : ""}
-				{overview ? <br></br> : ""}
+				{overview ? (
+					<>
+						<br></br>
+						<br></br>
+					</>
+				) : (
+					""
+				)}
 				{overview
 					? `Written by :
 				${
