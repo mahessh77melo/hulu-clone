@@ -1,0 +1,38 @@
+.episode {
+	border: 1px solid #aaa;
+	width: 100%;
+	border-radius: 4px;
+	color: white;
+	font-size: 1.6rem;
+	padding: 1.5rem;
+	margin-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	transition: all 0.3s;
+}
+.episode:hover {
+	cursor: pointer;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.episode__overview {
+	padding: 0rem 2rem;
+}
+.episode__permenant {
+	display: flex;
+}
+.episode__permenant * {
+	padding: 1rem 2rem;
+}
+.episode__rating svg {
+	padding: 0;
+	margin: 0 1rem;
+	color: rgb(241, 207, 14);
+	transform: translateY(-3px);
+	font-size: 1.8rem;
+}
+.episode__rating {
+	display: flex;
+	align-items: stretch;
+	justify-content: stretch;
+}

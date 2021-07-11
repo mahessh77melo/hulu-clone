@@ -1,0 +1,37 @@
+.season-detail {
+	min-height: 100vh;
+	padding: 3rem;
+}
+.season-detail__header {
+	display: flex;
+}
+.season-detail__left {
+	flex: 0.4;
+}
+.season-detail__poster {
+	width: auto;
+	height: 92.5vh;
+	border-radius: 5px;
+	margin: 2rem;
+	box-shadow: 0 1.5rem 2rem rgba(0, 0, 0, 0.6);
+}
+.season-detail__right {
+	margin: 2rem;
+	flex: 1;
+}
+.season-detail__title {
+	color: white;
+	font-size: 3.5rem;
+	font-weight: bold;
+	width: 100%;
+	padding-bottom: 2rem;
+}
+.season-detail__overview {
+	color: white;
+	font-size: 2rem;
+	line-height: 2;
+	padding-bottom: 2rem;
+}
+.season-detail__episodes {
+	width: 100%;
+}

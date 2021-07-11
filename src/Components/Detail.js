@@ -11,13 +11,12 @@ import SubdirectoryArrowRightIcon from "@material-ui/icons/SubdirectoryArrowRigh
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
-import { api_key } from "../js/requests";
+import { api_key, base } from "../js/requests";
 import { IconButton } from "@material-ui/core";
 
 const Detail = ({ watchList, setWatchList }) => {
 	const { movieID, mediaType } = useParams();
 	const [current, setCurrent] = useState();
-	const base = "https://image.tmdb.org/t/p/original/";
 	useEffect(() => {
 		async function getCurrent(id, media) {
 			try {
@@ -80,18 +79,29 @@ const Detail = ({ watchList, setWatchList }) => {
 					</p>
 				</div>
 				<div className="detail__buttons">
-					<button
-						className="btn btn-play"
-						onClick={() => {
-							alert(
-								`Did you seriously think you can watch ${
-									current.title || current.name
-								} for free?? 🤣🤣 Come on now!!!`
-							);
-						}}
-					>
-						<PlayCircleOutlineIcon /> Watch Now
-					</button>
+					{mediaType === "movie" ? (
+						<button
+							className="btn btn-play"
+							onClick={() => {
+								alert(
+									`Did you seriously think you can watch ${
+										current.title || current.name
+									} for free?? 🤣🤣 Come on now!!!`
+								);
+							}}
+						>
+							<PlayCircleOutlineIcon /> Watch Now
+						</button>
+					) : (
+						<Link
+							to={`/${mediaType}/${movieID}/seasons`}
+							style={{ textDecoration: "none", color: "white" }}
+						>
+							<button className="btn btn-play">
+								<PlayCircleOutlineIcon /> Seasons
+							</button>
+						</Link>
+					)}
 					{watchList.filter((item) => item.idn === current.id).length ? (
 						<button className="btn btn-added">
 							<CheckCircleIcon /> Added to Watchlist

@@ -3,6 +3,7 @@ import Header from "./Components/Header";
 import Nav from "./Components/Nav";
 import Results from "./Components/Results";
 import Detail from "./Components/Detail";
+import Seasons from "./Components/Seasons";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import requests, { initValue } from "./js/requests";
 import WatchList from "./Components/WatchList";
@@ -12,6 +13,7 @@ import "./Styles/App.css";
 import "./Styles/WatchList.css";
 import Cast from "./Components/Cast";
 import KnownForMovies from "./Components/KnownForMovies";
+import SeasonDetail from "./Components/SeasonDetail";
 
 function App() {
 	const [genre, setGenre] = useState(requests.fetchAction);
@@ -50,6 +52,12 @@ function App() {
 				</Route>
 				<Route path="/:mediaType/:movieID/cast" exact>
 					<Cast />
+				</Route>
+				<Route path="/:mediaType/:movieID/seasons" exact>
+					<Seasons />
+				</Route>
+				<Route path="/:mediaType/:movieID/seasons/season/:seasonNumber" exact>
+					<SeasonDetail />
 				</Route>
 			</Router>
 		</div>

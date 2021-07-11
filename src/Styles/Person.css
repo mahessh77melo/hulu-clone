@@ -16,7 +16,7 @@
 }
 .person__img {
 	height: 25rem;
-	width: 15rem;
+	width: 17rem;
 	margin: 2rem 3rem;
 	overflow: hidden;
 	border-radius: 3px;
@@ -33,9 +33,10 @@
 .person__known-for {
 	outline: none;
 	border: none;
-	padding: 0.5rem 1rem;
+	padding: 1rem 1.5rem;
 	overflow: hidden;
 	position: relative;
+	font-family: inherit;
 	margin: 0 3rem;
 	background-color: white;
 	color: #555;

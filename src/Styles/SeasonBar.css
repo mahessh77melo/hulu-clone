@@ -1,0 +1,32 @@
+.season-bar {
+	display: flex;
+	flex-direction: column;
+	border-radius: 2px;
+	border: 1px solid #aaa;
+	color: whtie;
+	z-index: 10;
+	padding: 1rem 2rem;
+	margin: 3rem 0;
+	transition: all 0.2s;
+}
+.season-bar:hover {
+	background-image: linear-gradient(
+		to right bottom,
+		rgba(255, 255, 255, 0.15) 0%,
+		rgba(255, 255, 255, 0.15) 50%,
+		rgba(255, 255, 255, 0.2) 50%
+	);
+	transform: translateY(-5px);
+}
+.season-bar__left {
+	flex: 0.3;
+}
+.season-bar__poster {
+	width: 100%;
+}
+.season-bar__right {
+	font-size: 1.8rem;
+}
+.season-bar__right * {
+	padding: 1rem;
+}

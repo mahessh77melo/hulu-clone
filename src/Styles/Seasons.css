@@ -1,0 +1,11 @@
+.seasons {
+	min-height: 100vh;
+	padding: 3rem;
+	position: relative;
+	background-position: cover;
+}
+.seasons__title {
+	font-size: 4rem;
+	font-weight: bold;
+	color: white;
+}

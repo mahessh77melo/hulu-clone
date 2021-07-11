@@ -69,6 +69,7 @@
 .btn {
 	outline: none;
 	border: none;
+	font-family: inherit;
 	padding: 1.5rem 4rem;
 	overflow: hidden;
 	position: relative;
