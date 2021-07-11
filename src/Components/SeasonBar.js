@@ -22,14 +22,5 @@ const SeasonBar = ({ item }) => {
 		</Link>
 	);
 };
-/* 
-air_date: "2020-09-09"
-episode_count: 4
-id: 163277
-name: "Specials"
-overview: ""
-poster_path: "/cCXG81dSCPXcqYm6gTHlwtXocti.jpg"
-season_number: 0
-*/
 
 export default SeasonBar;

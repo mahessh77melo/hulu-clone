@@ -46,14 +46,3 @@ const SeasonDetail = () => {
 };
 
 export default SeasonDetail;
-
-/* 
-
-air_date: "2016-05-05"
-episodes: (6) [{…}, {…}, {…}, {…}, {…}, {…}]
-id: 72707
-name: "Series 3"
-overview: "The action has moved on two years to 1924 and as Tommy starts married life he is more determined than ever to go legitimate and keep his family safe. But he finds himself pulled into a web of intrigue more lethal than anything he has yet encountered."
-poster_path: "/1AjIcMZnRSuaAMn6Ajsv8mZfUu.jpg"
-season_number: 3
-_id: "567064f992514169e2013760"*/

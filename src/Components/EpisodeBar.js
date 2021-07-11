@@ -44,18 +44,3 @@ const EpisodeBar = ({ episode: ep }) => {
 };
 
 export default EpisodeBar;
-
-/* 
-air_date: "2009-03-08"
-crew: (2) [{…}, {…}]
-episode_number: 1
-guest_stars: (2) [{…}, {…}]
-id: 972873
-name: "Seven Thirty-Seven"
-overview: "Walt and Jesse are vividly reminded of Tuco’s volatile nature, and try to figure a way out of their business partnership. Hank attempts to mend fences between the estranged Marie and Skyler."
-production_code: ""
-season_number: 2
-still_path: "/7vVujNqjP23MtPqUTBNITIW3DDA.jpg"
-vote_average: 8.3
-vote_count: 75
-*/
