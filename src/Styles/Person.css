@@ -47,6 +47,10 @@
 	cursor: pointer;
 	transition: all 0.2s ease-out;
 }
+.person__known-for:hover {
+	box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.4);
+	transform: translate(0, -4px);
+}
 
 .person__known-for svg {
 	font-size: 3rem;
