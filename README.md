@@ -15,17 +15,15 @@ I have deployed this app on firebase at [https://hulu-clone-f9922.web.app/](http
 - Movies are segregated by various genres and you can look around for movies in whatever genre you prefer.
 - There is a search functionality available and don't forget to choose whether you are searching for a movie or a tv show. 
 - Casting Page is available, just look for the button. 
+- A search functionality feature for people is available. You can look for a cast member, a director etc.
+- When the people search result is available, you can see the movies that the person is known for.
+- For TV Shows, extra pages have been added which show the list of seasons and list of episodes.
 - Some of your local language movies may be available, try looking for them.
   
 ## What's not in it? 
 
 - Obviously, you **can't watch** any of the movies or tv shows. This is just a project for my resume.
 - The site **hasn't been optimized for mobile view** even a bit, so please don't try seeing this in a mobile view. 
-- ~~There is an unsolved bug, the **page whites out** when you reload or hit *open link in new tab*.~~
-- ~~Don't try **altering the url**, it won't work either.~~
-
-- (Dec-7-2020) commit --> I have solved this firebase bug using a **[stackoverflow answer](https://stackoverflow.com/questions/48826489/react-production-router-404-after-deep-refresh-firebase)**. So I've striked out the above-mentioned limitations. The following one still stands tho. xD
-- P.S --> *I am not a firebase expert.*
 
 ---
 <br>
