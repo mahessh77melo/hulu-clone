@@ -27,13 +27,18 @@ const Detail = ({ watchList, setWatchList }) => {
 			}
 		}
 		getCurrent(movieID, mediaType);
-	}, [movieID, mediaType]);
+	}, [movieID, mediaType, current]);
 
 	const LinkStyles = {
 		textDecoration: "none",
 		marginLeft: "3rem",
 		color: "whitesmoke",
 		fontSize: "4rem",
+	};
+
+	const title = current ? current.title || current.name : "";
+	const titleFontSize = {
+		fontSize: title?.length < 30 ? "7.5rem" : "4.5rem",
 	};
 
 	return current ? (
@@ -47,7 +52,9 @@ const Detail = ({ watchList, setWatchList }) => {
 			</div>
 			<div className="detail__right">
 				<div className="detail__one">
-					<h1 className="detail__title">{current.title || current.name}</h1>
+					<h1 className="detail__title" style={titleFontSize}>
+						{title}
+					</h1>
 					<p className="detail__desc">{current.overview}</p>
 				</div>
 
