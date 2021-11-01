@@ -5,18 +5,19 @@ import VertCard from "./VertCard";
 import "../Styles/WatchList.css";
 
 const WatchList = ({ watchList, setWatchList }) => {
-	const [Movies, setMovies] = useState([]);
+	const [movies, setMovies] = useState([]);
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		setMovies([]);
 		async function getWatchList(id, media) {
-			// console.log(`/movie/${id}?api_key=${api_key}`);
 			const movie = await axios.get(`${media}/${id}?api_key=${api_key}`);
 			setMovies((prev) => {
 				return prev.concat(movie.data);
 			});
 		}
+		// sorting the watchlist so that it doesnt change everytime
+		watchList.sort((item) => item.idn);
 		watchList.forEach((item) => {
 			setLoading(true);
 			getWatchList(item.idn, item.mediaType);
@@ -26,8 +27,8 @@ const WatchList = ({ watchList, setWatchList }) => {
 
 	return (
 		<div className="watchlist">
-			{Movies.length
-				? Movies.map((movie) => (
+			{movies.length
+				? movies.map((movie) => (
 						<VertCard
 							setWatchList={setWatchList}
 							movie={movie}
@@ -35,7 +36,7 @@ const WatchList = ({ watchList, setWatchList }) => {
 						/>
 				  ))
 				: !loading &&
-				  !Movies.length && (
+				  !movies.length && (
 						<h1 className="title">
 							No Movies or tv shows in your WatchList :({" "}
 						</h1>

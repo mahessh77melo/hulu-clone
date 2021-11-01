@@ -14,5 +14,5 @@ export default {
 	fetchAnimation: `/discover/movie?api_key=${api_key}&with_genres=16`,
 	fetchTV: `/discover/movie?api_key=${api_key}&with_genres=10770`,
 };
-export const initValue =
+export const existingWatchlist =
 	JSON.parse(localStorage.getItem("huluWatchList")) || [];
