@@ -17,7 +17,7 @@ const WatchList = ({ watchList, setWatchList }) => {
 			});
 		}
 		// sorting the watchlist so that it doesnt change everytime
-		watchList.sort((item) => item.idn);
+		watchList.sort((first, second) => (first.idn > second.idn ? 1 : -1));
 		watchList.forEach((item) => {
 			setLoading(true);
 			getWatchList(item.idn, item.mediaType);
