@@ -17,6 +17,7 @@
 .movies-list {
 	display: flex;
 	flex-wrap: wrap;
+	justify-content: space-between;
 }
 .bio {
 	font-size: 1.6rem;
