@@ -1,10 +1,15 @@
+.cast-parent {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	min-height: 100vh;
+	padding: 5rem 0;
+}
 .cast-container {
 	display: flex;
 	flex-wrap: wrap;
 	align-content: center;
 	justify-content: space-around;
-	min-height: 100vh;
-	padding: 5rem 0;
 }
 .title {
 	font-size: 4.5rem;

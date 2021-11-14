@@ -3,14 +3,9 @@ import { base } from "../js/requests";
 import "../Styles/CastCard.css";
 
 const CastCard = ({ member }) => {
-	const wikiSearchName = member.name.split(" ").join("_");
-
 	return (
 		<>
-			<a
-				className="cast-card"
-				href={`https://en.wikipedia.org/wiki/${wikiSearchName}`}
-			>
+			<a className="cast-card" href={`/searchPeople/${member.id}/knownfor`}>
 				<img
 					className="cast-card__backdrop"
 					src={`${base}${member.profile_path}`}

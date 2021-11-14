@@ -24,26 +24,30 @@ const Cast = () => {
 	}, [media, id]);
 
 	return (
-		<div className="cast-container">
-			<h1 className="title">
-				{" "}
-				Casting of{" "}
-				{movie?.title ||
-					movie?.original_title ||
-					movie?.name ||
-					movie?.original_name}
-			</h1>
-			<h3 className="title director">
-				Director :{" "}
-				{crew?.find((member) => member.job === "Director")?.name ||
-					crew?.find((member) => member.known_for_department === "Writing")
-						?.name ||
-					"Unknown"}
-			</h3>
-			{cast?.map(
-				(member) =>
-					member.profile_path && <CastCard key={member.id} member={member} />
-			)}
+		<div className="cast-parent">
+			<div className="heading-container">
+				<h1 className="title">
+					{" "}
+					Casting of{" "}
+					{movie?.title ||
+						movie?.original_title ||
+						movie?.name ||
+						movie?.original_name}
+				</h1>
+				<h3 className="title director">
+					Director :{" "}
+					{crew?.find((member) => member.job === "Director")?.name ||
+						crew?.find((member) => member.known_for_department === "Writing")
+							?.name ||
+						"Unknown"}
+				</h3>
+			</div>
+			<div className="cast-container">
+				{cast?.map(
+					(member) =>
+						member.profile_path && <CastCard key={member.id} member={member} />
+				)}
+			</div>
 		</div>
 	);
 };
