@@ -10,6 +10,10 @@ import "../Styles/VertCard.css";
 import { base } from "../js/requests";
 
 const VertCard = ({ movie, setWatchList }) => {
+	const title = movie ? movie.title || movie.name : "";
+	const titleFontSize = {
+		fontSize: title?.length < 30 ? "2.5rem" : "1.6rem",
+	};
 	return (
 		<div className="vert-card">
 			<Link
@@ -21,7 +25,9 @@ const VertCard = ({ movie, setWatchList }) => {
 					src={`${base}${movie.backdrop_path || movie.poster_path}`}
 					alt="poster"
 				/>
-				<h2 className="card__title">{movie.name ? movie.name : movie.title}</h2>
+				<h2 className="card__title" style={titleFontSize}>
+					{movie.name ? movie.name : movie.title}
+				</h2>
 				<TextTruncate
 					line={2}
 					truncateText="..."
