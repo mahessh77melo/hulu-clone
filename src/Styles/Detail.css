@@ -70,7 +70,7 @@
 	outline: none;
 	border: none;
 	font-family: inherit;
-	padding: 1.5rem 4rem;
+	padding: 1.5rem 2.5rem;
 	overflow: hidden;
 	position: relative;
 	margin: 0 3rem;
@@ -97,7 +97,7 @@ span.ripple {
 }
 .btn svg {
 	font-size: 4rem;
-	margin-right: 1.5rem;
+	margin-right: 1rem;
 }
 .detail__buttons {
 	display: flex;

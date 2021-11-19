@@ -1,0 +1,27 @@
+.similars-container {
+	min-height: 100vh;
+}
+.similars-header h1 {
+	font-size: 5.5rem;
+	letter-spacing: 4px;
+	color: whitesmoke;
+	margin: 1.5rem 2rem;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+.similars-header {
+	font-size: 2.5rem;
+	letter-spacing: 2px;
+	color: whitesmoke;
+	margin: 1.5rem 2rem;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+.similars-list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+}

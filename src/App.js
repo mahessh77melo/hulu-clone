@@ -14,6 +14,7 @@ import "./Styles/WatchList.css";
 import Cast from "./Components/Cast";
 import KnownForMovies from "./Components/KnownForMovies";
 import SeasonDetail from "./Components/SeasonDetail";
+import Similars from "./Components/Similars";
 
 function App() {
 	const [genre, setGenre] = useState(requests.fetchAction);
@@ -24,6 +25,9 @@ function App() {
 			<Router>
 				<Route path="/:mediaType/:movieID" exact>
 					<Detail watchList={watchList} setWatchList={setWatchList} />
+				</Route>
+				<Route path="/:mediaType/:movieID/recommendations" exact>
+					<Similars />
 				</Route>
 				<Route path="/" exact>
 					<Header />

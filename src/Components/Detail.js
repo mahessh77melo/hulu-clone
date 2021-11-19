@@ -11,6 +11,7 @@ import SubdirectoryArrowRightIcon from "@material-ui/icons/SubdirectoryArrowRigh
 import AddCircleOutlineIcon from "@material-ui/icons/AddCircleOutline";
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import CheckCircleIcon from "@material-ui/icons/CheckCircle";
+import MovieFilterIcon from "@material-ui/icons/MovieFilter";
 import { api_key, base } from "../js/requests";
 import { IconButton } from "@material-ui/core";
 
@@ -97,7 +98,7 @@ const Detail = ({ watchList, setWatchList }) => {
 								);
 							}}
 						>
-							<PlayCircleOutlineIcon /> Watch Now
+							<PlayCircleOutlineIcon /> Watch
 						</button>
 					) : (
 						<Link
@@ -147,6 +148,11 @@ const Detail = ({ watchList, setWatchList }) => {
 					<Link to="/watchlist">
 						<IconButton>
 							<VideoLibraryIcon style={LinkStyles} />
+						</IconButton>
+					</Link>
+					<Link to={`/${mediaType}/${movieID}/recommendations`}>
+						<IconButton>
+							<MovieFilterIcon style={LinkStyles} />
 						</IconButton>
 					</Link>
 				</div>
