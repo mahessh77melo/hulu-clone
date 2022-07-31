@@ -1,9 +1,10 @@
 .season-detail {
-	min-height: 100vh;
+	height: 100vh;
 	padding: 3rem;
 }
 .season-detail__header {
 	display: flex;
+	max-height: 100vh;
 }
 .season-detail__left {
 	flex: 0.4;
@@ -18,6 +19,11 @@
 .season-detail__right {
 	margin: 2rem;
 	flex: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-height: 100vh;
+	overflow-y: scroll;
 }
 .season-detail__title {
 	color: white;
@@ -34,4 +40,6 @@
 }
 .season-detail__episodes {
 	width: 100%;
+	overflow-y: scroll;
+	flex: 1;
 }

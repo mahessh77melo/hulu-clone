@@ -3,6 +3,7 @@
 	overflow-x: hidden;
 	overflow-y: scroll;
 	scrollbar-width: none;
+	min-height: 100vh;
 	font-family: "Kumbh Sans", sans-serif;
 }
 .app::-webkit-scrollbar {
