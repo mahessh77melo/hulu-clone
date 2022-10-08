@@ -1,6 +1,7 @@
 .watchlist {
 	min-height: 100vh;
 	display: flex;
+	overflow: hidden;
 	flex-wrap: wrap;
 	justify-content: flex-start;
 }
