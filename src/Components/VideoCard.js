@@ -19,7 +19,7 @@ const VideoCard = forwardRef(({ movie }, ref) => {
 					alt="poster"
 				/>
 				<img
-					src="https://upload.wikimedia.org/wikipedia/commons/e/e4/Hulu_Logo.svg"
+					src="https://upload.wikimedia.org/wikipedia/commons/0/0f/Hulu_Japan_green_logo.svg"
 					className="card__logo"
 					alt="hulu"
 					height="3.5rem"
